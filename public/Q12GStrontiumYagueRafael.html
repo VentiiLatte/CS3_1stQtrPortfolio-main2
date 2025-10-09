@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Rafael Yague of Strontium</h2>
+    
+<label>Meal price: </label>
+<input type="Number" id="MealPrice"><br><br>
+  <label>Tip: </label>
+  <input type="number" id="tip"><br><br>
+  <label>Service Change(%): </label>
+  <input type="number" id="serviceChange"><br><br>
+<button onclick="totalMeal()">Accept input</button><br>
+<p id="Replace">Total Meal: </p>
+    <script>
+        function totalMeal() {
+
+            let meal = parseFloat(document.getElementById("MealPrice").value);
+            let tip = parseFloat(document.getElementById("tip").value);
+            let service = parseFloat(document.getElementById("serviceChange").value);
+            var scpercent = (meal * (service/100));
+            var total = meal + scpercent + tip;
+
+           document.getElementById("Replace").innerHTML = "Total Meal: ₱" + total.toFixed(2);
+         
+        }
+    </script>
+
+</body>
+</html>
